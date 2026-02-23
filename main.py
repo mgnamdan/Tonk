@@ -1,4 +1,5 @@
 # Imports
+from cards import Card
 from decks import Deck
 
 
@@ -6,13 +7,22 @@ from decks import Deck
 def main():
     testDeck = Deck()
 
-    print(testDeck.drawPile)
+    drawnCard = testDeck.drawCard()
+    print(testDeck.outPile)
+    print("")
+    print(testDeck.discardPile)
+    print("")
+    testDeck.discardCard(drawnCard)
+    print(testDeck.outPile)
+    print("")
+    print(testDeck.discardPile)
+
     testDeck.resetDeck()
-    print("\n\n")
-    print(testDeck.drawPile)
-    testDeck.resetDeck()
-    print("\n\n")
-    print(testDeck.drawPile)
+    print(testDeck.outPile)
+    print("")
+    print(testDeck.discardPile)
+
+
 
 
 # Main Call
