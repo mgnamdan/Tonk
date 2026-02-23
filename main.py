@@ -1,26 +1,24 @@
 # Imports
 from cards import Card
 from decks import Deck
+from players import CmpPlayer, HmnPlayer
 
 
 # Main Definition
 def main():
-    testDeck = Deck()
+    playerOne = CmpPlayer()
+    playerTwo = HmnPlayer("Joe")
 
-    drawnCard = testDeck.drawCard()
-    print(testDeck.outPile)
+    print(playerOne.score)
     print("")
-    print(testDeck.discardPile)
+    print(playerOne.hand)
     print("")
-    testDeck.discardCard(drawnCard)
-    print(testDeck.outPile)
     print("")
-    print(testDeck.discardPile)
-
-    testDeck.resetDeck()
-    print(testDeck.outPile)
+    print(playerTwo.score)
     print("")
-    print(testDeck.discardPile)
+    print(playerTwo.hand)
+    print("")
+    print("")
 
 
 
